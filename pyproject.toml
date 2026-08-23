@@ -1,0 +1,94 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "django-sifen-catalogs"
+version = "0.1.0"
+description = "Official SIFEN geographic location catalogs for Django: departments, districts, cities, and neighborhoods in Paraguay."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.8"
+authors = [
+    { name = "Juan Duarte" },
+]
+keywords = [
+    "django",
+    "sifen",
+    "paraguay",
+    "locations",
+    "catalogs",
+    "geography",
+    "dnit",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Web Environment",
+    "Framework :: Django",
+    "Framework :: Django :: 3.2",
+    "Framework :: Django :: 4.2",
+    "Framework :: Django :: 5.0",
+    "Framework :: Django :: 5.1",
+    "Framework :: Django :: 5.2",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Application Frameworks",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "Django>=3.2,<6.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/JuanBer90/django-sifen-catalogs"
+Documentation = "https://github.com/JuanBer90/django-sifen-catalogs#readme"
+Repository = "https://github.com/JuanBer90/django-sifen-catalogs"
+Issues = "https://github.com/JuanBer90/django-sifen-catalogs/issues"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4,<8.4; python_version < '3.9'",
+    "pytest; python_version >= '3.9'",
+    "pytest-django>=4.8,<4.12; python_version < '3.9'",
+    "pytest-django; python_version >= '3.9'",
+    "build>=1.2.2,<1.3; python_version < '3.9'",
+    "build; python_version >= '3.9'",
+    "wheel>=0.44,<0.46; python_version < '3.9'",
+    "wheel; python_version >= '3.9'",
+    "ruff>=0.4; python_version >= '3.9'",
+    "twine>=5.0; python_version >= '3.9'",
+    "django-admin-dependent-autocomplete>=0.1.0",
+]
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+exclude = ["django_sifen_catalogs.tests*"]
+
+[tool.setuptools.package-data]
+django_sifen_catalogs = [
+    "data/locations.csv",
+    "data/PROVENANCE.md",
+    "locale/*/LC_MESSAGES/django.mo",
+]
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "django_sifen_catalogs.tests.settings"
+pythonpath = ["src", "testapp"]
+python_files = ["test_*.py"]
+
+[tool.ruff.lint]
+ignore = ["RUF012"]
+
+[tool.ruff.lint.per-file-ignores]
+"src/django_sifen_catalogs/migrations/*" = ["ALL"]
+"testapp/demo/migrations/*" = ["ALL"]
+"testapp/manage.py" = ["EXE001"]

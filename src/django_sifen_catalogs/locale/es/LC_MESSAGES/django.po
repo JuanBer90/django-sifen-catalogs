@@ -1,0 +1,86 @@
+# Spanish translations for django-sifen-catalogs.
+# Copyright (C) 2026 Juan Duarte
+# This file is distributed under the same license as the package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: django-sifen-catalogs 0.1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/JuanBer90/django-sifen-catalogs/issues\n"
+"POT-Creation-Date: 2026-08-22 21:45+0000\n"
+"PO-Revision-Date: 2026-08-22 21:45+0000\n"
+"Last-Translator: Juan Duarte\n"
+"Language-Team: Spanish\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "SIFEN code"
+msgstr "Código SIFEN"
+
+msgid "Name"
+msgstr "Nombre"
+
+msgid "Active"
+msgstr "Activo"
+
+msgid "Department"
+msgstr "Departamento"
+
+msgid "Departments"
+msgstr "Departamentos"
+
+msgid "District"
+msgstr "Distrito"
+
+msgid "Districts"
+msgstr "Distritos"
+
+msgid "City / Locality"
+msgstr "Ciudad / Localidad"
+
+msgid "Cities / Localities"
+msgstr "Ciudades / Localidades"
+
+msgid "Neighborhood"
+msgstr "Barrio"
+
+msgid "Neighborhoods"
+msgstr "Barrios"
+
+msgid "Locations"
+msgstr "Ubicaciones"
+
+msgid "Import departments, districts, cities, and neighborhoods from locations.csv idempotently."
+msgstr "Importa departamentos, distritos, ciudades y barrios desde locations.csv de forma idempotente."
+
+msgid "Path to the CSV file to import. Defaults to the bundled file at django_sifen_catalogs/data/locations.csv"
+msgstr "Ruta al CSV a importar. Por defecto usa el archivo empaquetado en django_sifen_catalogs/data/locations.csv"
+
+msgid "CSV file not found: %(path)s"
+msgstr "No se encontró el archivo CSV: %(path)s"
+
+msgid "Could not read CSV file: %(path)s"
+msgstr "No se pudo leer el archivo CSV: %(path)s"
+
+msgid "The CSV file has no data rows."
+msgstr "El CSV no tiene filas de datos."
+
+msgid "File: %(path)s"
+msgstr "Archivo: %(path)s"
+
+msgid "Rows processed: %(count)s"
+msgstr "Filas procesadas: %(count)s"
+
+msgid "Departments created: %(created)s | updated: %(updated)s"
+msgstr "Departamentos creados: %(created)s | actualizados: %(updated)s"
+
+msgid "Districts created: %(created)s | updated: %(updated)s"
+msgstr "Distritos creados: %(created)s | actualizados: %(updated)s"
+
+msgid "Cities created: %(created)s | updated: %(updated)s"
+msgstr "Ciudades creadas: %(created)s | actualizadas: %(updated)s"
+
+msgid "Neighborhoods created: %(created)s | updated: %(updated)s"
+msgstr "Barrios creados: %(created)s | actualizados: %(updated)s"
